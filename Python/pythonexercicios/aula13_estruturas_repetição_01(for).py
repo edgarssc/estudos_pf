@@ -1,7 +1,7 @@
 from posixpath import split
 from re import X
 from time import sleep
-import emoji
+
 
 # for i in range(10,0,-1):
 #     print("passo {}".format(i))

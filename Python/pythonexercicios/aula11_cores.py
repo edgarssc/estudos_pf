@@ -6,9 +6,21 @@
 a=3
 b=5
 cores = {'limpa':'\033[m',
-         'azul':'\033[34m',
-         'amarelo':'\033[33m',
-         'pretoebranco':'\033[7;30m'}
+         'azul':'\033[1;34m',
+         'amarelo':'\033[1;33m',
+         'pretoebranco':'\033[7;30m',
+         'vermelho':'\033[1;31m',
+         'verde':'\033[1;32m',
+         'roxo':'\033[1;35m'}
+
+cores_fundo = {'limpa':'\033[m',
+         'azul':'\033[1;44m',
+         'amarelo':'\033[1;43m',
+         'pretoebranco':'\033[7;40m',
+         'vermelho':'\033[1;41m',
+         'verde':'\033[1;42m',
+         'roxo':'\033[1;45m'}
+
 
 print("\nOs valor de a e b são \033[1;31m{}\033[m e \033[1;36m{}\033[m!!!\n".format(a,b))
 print("Os valor de a e b são {}{}{} e {}{}{}!!!\n".format('\033[1;31m',a,'\033[m','\033[1;31m',b,'\033[m'))
