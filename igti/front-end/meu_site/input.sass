@@ -1,0 +1,174 @@
+$blue-med: #006699
+$blue-dark: #003366
+$blue-light: #006699
+$grey-med: #999999
+$grey-dark: #666666
+$grey-light: #cccccc
+$orange-med: #ff9900
+$orange-dark: #ff6600
+$orange-light: #ffcc00
+$pad10: 10px
+
+body
+    background: white
+    width: auto
+    margin: 0 auto
+
+main
+    max-width: 1200px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: (4, 1f)
+    grid-template-rows: auto
+    //column-gap: 50px
+    //row-gap: 50px
+    grid-template-areas: "main-title main-title main-title main-title" "about about about about" "quote quote quote quote" "job-experience job-experience job-experience skills" "education education extracurricular extracurricular" 
+    text-align: center
+
+header
+    position: sticky
+    top: 0
+    nav
+        background-color: $blue-med
+        // organiza e separa melhor os itens da barra de menus
+        display: flex
+        justify-content: space-evenly
+        padding: 20px
+        
+        a
+            text-decoration: none
+            color: white
+    
+    h1
+        text-align: center
+
+#about
+    grid-area: about
+    display: flex
+    max-width: 1200px
+    
+    #about__photo_do_perfil
+        max-width: 200px
+        height: auto
+
+    #about__text_cnt
+        background-color: white
+        padding: 50px
+
+#quote
+    grid-area: quote
+    background-color: $blue-dark
+    text-align: center
+    color: white
+    padding: 20px 0
+    
+
+    #quote__cite
+        font-style: italic
+        font-size: 1.5em
+
+#job-experience
+    grid-area: job-experience
+    background-color: rgb(240, 240, 240)
+    padding: 20px
+
+    #job-experience__experience
+        display: grid
+        grid-template-columns: (6, 1fr)
+        grid-template-rows: auto
+        column-gap: 10px
+        row-gap: 10px
+        grid-template-areas: "job-experience_cesan job-experience_cesan job-experience_guimar job-experience_guimar job-experience_logos job-experience_logos"
+        
+        .job-exp_jobs
+            //deixa a borda da div arredondada
+            border-radius: 10px
+            background-color: white
+            padding: 10px
+            .job-exp_company
+                max-height: 70px
+                width: auto
+        #job-experience_cesan
+            grid-area: job-experience_cesan
+            text-align: center
+        #job-experience_guimar
+            grid-area: job-experience_guimar
+            text-align: center
+        #job-experience_logos
+            text-align: center
+            grid-area: job-experience_logos
+
+#skills
+    grid-area: skills
+    background-color: rgb(36, 68, 90)
+    padding: 20px
+
+#education
+    grid-area: education
+    background-color: white
+    padding: 20px
+    #education__college
+        grid-area: college
+        background-color: $blue-light
+        color: white
+
+#extracurricular
+    grid-area: extracurricular
+    background-color: white
+    padding: 20px
+    #extracurricular_div1
+        color: white
+        background-color: $blue-light
+
+footer
+    background-color: black
+    display: flex
+    color: white
+    justify-content: space-between
+    flex-flow: row wrap
+    padding: 10px 10px
+    #fotter__social-medias
+        .footer__social-medias-icons
+            max-width: 40px
+            height: auto
+    #fotter__email-phone
+        p
+            margin: 0 auto
+
+@media screen and ( max-width: 480px )
+    main
+        grid-template-columns: 100%
+        grid-template-areas: "main-title" "about" "quote" "job-experience" "education" "extracurricular" "skills" "footer"
+
+    #about
+        flex-flow: column wrap
+        justify-content: center
+        
+        #about__photo_do_perfil
+            max-width: 250px
+            margin: 0 auto
+        
+        #about__text_cnt
+            padding: 20px
+    
+    #quote
+        grid-area: quote
+        background-color: $blue-dark
+        text-align: center
+        color: white
+        padding: 20px 0
+        #quote__cite
+            font-style: italic
+            font-size: 1.5em
+    
+    #job-experience    
+        #job-experience__experience
+            grid-template-columns: 100%
+            grid-template-areas: "job-experience_cesan" "job-experience_guimar" "job-experience_logos"
+
+            #job-experience_cesan, #job-experience_guimar, #job-experience_logos
+                display: flex
+                align-items: center
+    
+    #footer
+        flex-flow: column wrap
