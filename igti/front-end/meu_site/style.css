@@ -39,7 +39,7 @@ header {
 
 #quote {
   grid-area: quote;
-  background-color: #003366;
+  background-color: #0b1949;
   text-align: center;
   color: white;
   padding: 20px 0; }
@@ -49,7 +49,7 @@ header {
 
 #job-experience {
   grid-area: job-experience;
-  background-color: #f0f0f0;
+  background-color: #caf3ee;
   padding: 20px; }
   #job-experience #job-experience__experience {
     display: grid;
@@ -60,7 +60,7 @@ header {
     grid-template-areas: "job-experience_cesan job-experience_cesan job-experience_guimar job-experience_guimar job-experience_logos job-experience_logos"; }
     #job-experience #job-experience__experience .job-exp_jobs {
       border-radius: 10px;
-      background-color: white;
+      background-color: #c4e2e6;
       padding: 10px; }
       #job-experience #job-experience__experience .job-exp_jobs .job-exp_company {
         max-height: 70px;
