@@ -14,6 +14,10 @@
   
 <div style="display: inline_block"><br>
   <img align="center" alt="edgar-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+  <img align="center" alt="edgar-Python" height="90" width="40" src="https://github.com/devicons/devicon/blob/master/icons/neo4j/neo4j-plain-wordmark.svg">
+  <img align="center" alt="edgar-Python" height="50" width="40" src="https://github.com/devicons/devicon/blob/master/icons/php/php-plain.svg">
+  <img align="center" alt="edgar-Python" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg">
+  <img align="center" alt="edgar-Python" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg">
 </div>
   
 
