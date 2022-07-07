@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+app-tic-tac-toe table{
+    border-spacing: 0; /*remove o espaçamento entre as células*/
+    border-collapse: collapse; /*remove bordas que estão uma em cima da outra*/
+}
+
+app-tic-tac-toe td{
+    border: 2px solid black;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    vertical-align: middle;
+}

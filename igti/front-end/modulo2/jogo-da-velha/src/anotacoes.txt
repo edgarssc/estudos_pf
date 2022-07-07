@@ -1,0 +1,10 @@
+//criando uma nova aplicação
+ng new <nome da aplicação>
+
+//rodando o serve de desenvolvimento
+cd <nome da aplicação>
+ng serve #acesse localhost:4200
+
+
+//criando um componente Angular
+ng generate componente <nome do componente>
