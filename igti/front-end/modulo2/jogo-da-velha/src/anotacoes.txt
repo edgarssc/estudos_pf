@@ -8,3 +8,49 @@ ng serve #acesse localhost:4200
 
 //criando um componente Angular
 ng generate componente <nome do componente>
+
+
+//RegEx
+[0] - Tudoque for digitado entre conchetes, representa um caracter, por exemplo nesse caso
+irá buscar todos os zeros do texto.
+[02] - Se colocarmos [02] irá buscar 0 e 2, independente da ordem
+que aparece no texto. 
+[0-9] - Buscar todos os número entre 0 e 9.
+[0][0] - busca por sequencias de 00 no texto.
+[0]{2} - Entre chaves, são multiplicadores, significam duas ocorrencias do caracter 0 no texto.
+[0-9]{6} - Destaca os 6 primeiros digitos em sequência entre 0 e 9 de todas as linhas do texto.
+$ - representa o fim da expressão.
+[0-9]{6}$ - Busca os últimos seis caracteres que possuem uma sequencia entre 0 e 9 no texto.
+^ - representa o começo da expressão.
+^[0-9]{6}$ - Busca somente se a expressão começar com essa sequencia de números e terminar com a mesma sequencia.
++ - Significa um número qualquer de ocorrencias.
+^[0-9]+[-][a-z]$ - Nesse caso estamos buscando qualquer ocorrencia que comece com números entre
+0 e 9, depois aceita qualquer coisa seguido do "-" e depois qualquer letra entre "a e z".
+/i - para não diferenciar maiúsculas de minúsculas.
+a+ - uma ou mais expressões com a letra "a"
+a* - zero ou mais expressões com a letra "a".
+\s - traz os espaços em branco.
+\S - Traz todos os caracteres sem contar os espaços em branco.
+\d - Traz apenas os caracteres numericos.
+\D - Traz todos os não numéricos.
+
+Exemplo de RegEx para validar um CPF:
+037.626.860-33
+[0-9]{3}[.][0-9]{3}[.][0-9]{3}[.][-][0-9]{2}
+
+Exemplo2: Substituir o formato de uma data
+
+2010-12-20 -> [0-9]{4}[-][0-9]{2}[-][0-9]{2} realiza a busca pela sequencia desejada.
+depois utiliza o "()" para demarcar cada grupo a ser substituído:
+([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})
+Na ordem temos:
+1º grupo: ([0-9]{4})
+2º grupo: ([0-9]{2})
+3º grupo: ([0-9]{2})
+
+Para substituir utilizamos: 
+$3/$2/$1 -> representa a posição que cada grupo deve ficar, sendo que o terceiro grupo fica
+no lugar do primeiro, o segundo no mesmo lugar e o primeiro no lugar do terceiro.
+Resultado: 20/12/2010
+
+
