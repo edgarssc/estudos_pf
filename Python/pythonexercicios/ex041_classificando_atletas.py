@@ -23,9 +23,11 @@ def perfumaria(X):
     print(X)
     print('-='*40)
 
-def alistamento(nasc):
-    dataAlistamento = nasc + 18
-    return dataAlistamento
+def idade(nasc):
+    idade = date.today().year - nasc
+    return idade
+#testando funções com o uso de lambda - funções anônimas
+idade2 = lambda x: date.today().year - x
 
 #############--Código Principal--#############################################################
 
@@ -33,14 +35,14 @@ from datetime import date
 
 nasc = int(input('Informe seu ano de nascimento: '))
 hoje = date.today().year
-alistado = alistamento(nasc)
 
-if alistamento(nasc) == hoje:
-    perfumaria(f'Você deve se alistar esse ano {cores["roxo"]}IMEDIATAMENTE!{cores["limpa"]}')
-
-elif (hoje - alistamento(nasc)) > 18:
-    perfumaria(f'Você se alistou em {cores["azul"]}{alistado}{cores["limpa"]} há {cores["azul"]}{hoje - alistado}{cores["limpa"]}')
-
+if  idade(nasc) <= 9:
+    perfumaria(f'Você é um atleta {cores["amarelo"]}MIRIM{cores["limpa"]}')
+elif  (idade2(nasc) > 9) and (idade(nasc) <= 14):
+    perfumaria(f'Você é um atleta {cores["azul"]}INFANTIL{cores["limpa"]}')
+elif  (idade(nasc) > 14) and (idade(nasc) <= 19):
+    perfumaria(f'Você é um atleta {cores["roxo"]}JUNIOR{cores["limpa"]}')
+elif  (idade(nasc) > 19) and (idade(nasc) <= 25):
+    perfumaria(f'Você é um atleta {cores["verde"]}SÊNIORL{cores["limpa"]}')
 else:
-    perfumaria(f'Faltam {cores["amarelo"]}{hoje - nasc} anos{cores["limpa"]} para seu alistamento militar.\n Seu alistamento será em {cores["amarelo"]}{18 - (hoje - nasc)} anos {cores["limpa"]}')
-    
+    perfumaria(f'Você é um atleta {cores["vermelho"]}MASTER{cores["limpa"]}')
